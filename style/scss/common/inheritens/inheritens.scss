@@ -1,0 +1,19 @@
+/*html,body{
+    overflow-x: hidden
+    }*/
+%flex-box{
+    display: flex;
+    align-items: center;
+}
+%transform-centre{
+    left: -50%;
+    transform: translateX(50%);
+}
+%border-line{
+    border-bottom: 3px solid red;
+    max-width: 130px; 
+}
+%display-wrap{
+    display: flex;
+    flex-wrap: wrap;
+}

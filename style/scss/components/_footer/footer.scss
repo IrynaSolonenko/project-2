@@ -1,0 +1,36 @@
+@import "../../common/index";
+footer{
+    margin-top: $block-margin;
+    background: #313030;
+    .foot{
+        @include flex(space-between, center);
+        width: 100%;
+        padding: 20px 0 20px;
+        a{
+            color: #bababa;
+            text-decoration: none;
+            @include font(16px, 400)
+        }
+        .social-network{
+            ul{
+               display: flex;
+                li{
+                    list-style: none;
+                    a{
+                    
+                        img{
+                            width: 33px;
+                            height: 33px;
+                            filter: invert(100%) sepia(3%) saturate(1296%) hue-rotate(233deg) brightness(112%) contrast(84%);
+                        }
+                    }
+                }
+                
+            }
+    }
+    
+        
+            
+        }
+   
+}

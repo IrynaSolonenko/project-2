@@ -1,0 +1,18 @@
+@mixin font($font-s, $font-w){
+    font-size: $font-s;
+    font-weight: $font-w;
+    font-family: $font-fam;
+}
+
+@mixin button($bg-color, $font-color){
+    background: $bg-color;
+    color: $font-color;
+    border-radius: 7px;
+    display: inline-block;
+    border: 1px solid red;
+}
+@mixin flex($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}

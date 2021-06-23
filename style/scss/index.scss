@@ -1,0 +1,16 @@
+@import "components/_header/header";
+@import "components/_header/header_media";
+@import "components/_main/main";
+@import "components/_main/main_media";
+@import "components/_footer/footer";
+@import "components/_footer/footer_media";
+@import "../reset.css";
+@import "common/commons/common";
+@import "common/commons/common-media";
+@import "common/mixins/mixins";
+@import "common/mixins/mixin-media";
+@import "common/vars/vars";
+@import "common/vars/vars-media";
+@import "common/inheritens/inheritens";
+@import "common/inheritens/inheritens-media";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400&display=swap');

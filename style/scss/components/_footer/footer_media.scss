@@ -1,0 +1,26 @@
+@import "../../common/index";
+@media(max-width:1250px){
+    footer{
+        padding: 0;
+        margin-top: 50px;
+        width: 100%;
+    }
+}
+@media(max-width:979px){
+    footer{
+        padding: 0;
+        margin-top: 50px;
+        width: 100%;
+    }
+}
+@media(max-width:767px){
+    footer{
+        width: 100%;
+        margin-top: 30px;
+        .foot{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}

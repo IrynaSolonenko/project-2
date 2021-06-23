@@ -1,0 +1,446 @@
+@import "../../common/index";
+main{
+    .about-us-main{
+        background: $main-color;
+        padding-top: $block-margin;
+        padding-bottom: $block-margin;
+
+        .first-main{
+            @extend %flex-box; 
+            
+            .info, .video{
+                width: 50%;
+            }
+                    h1{
+                        @include font(60px, 800);
+                        text-transform: uppercase;
+                        padding-bottom: 35px
+                    }
+                    p{
+                        @include font(16px, 400);
+                        margin:0 50px 60px 0;
+                        line-height: $line-height;
+
+                    }
+                
+                    a{
+                        @include font(18px, Bold);
+                        @include button(red, white);
+                        text-decoration: none;
+                        padding: 16px 50px;
+                            }
+                    
+                    a:hover {
+                        @include button(white, red);
+                    }
+                }
+                .video{
+                    @include flex(flex-end, flex-start);
+                    }
+                    .ifraim-video{
+                        position: relative;
+                        height: 355px;
+                       max-width: 550px;
+                        background: #c4c0b1;
+                        box-shadow: 0px 1px 20px 12px #00001f1f;
+                        width: 100%;
+                        margin-left: 30px;
+                        
+                        img{
+                            position: absolute;
+                            top: 50%;
+                            left: 50%; 
+                            margin-right: -50%; 
+                            transform: translate( -50%, -50%);
+                        }
+                    }
+                }
+    
+        .main-wrapper {
+            @include flex(flex-start, baseline);
+            margin-top: $block-margin;
+            .container{
+                padding-bottom: $block-margin;
+            border-bottom: 1px solid rgb(206, 204, 204);
+
+            .left-part {
+                    width: 50%;
+                    padding: 0 110px 0 0;
+                            h2 {
+                                @include font(42px, Bold);
+                                text-transform: uppercase;
+                                color: $font-color-h;
+                                padding-bottom: 45px;
+                            }  
+                        a{
+                        @include font(18px, Bold);
+                        @include button(white, red);
+                        text-decoration: none;
+                        padding: 16px 50px;
+                            }
+                    
+                    a:hover {
+                        @include button(red, white);
+                    }
+                    p{
+                        @include font(16px, 400);
+                        margin-bottom:50px;
+                        line-height: $line-height;
+
+                    }
+                }
+            .right-part{
+                @include flex(space-between, flex-start);
+                    width: 50%;
+                    flex-wrap: wrap;
+                    .info {
+                        width: 50%;  
+                        padding: 0;
+
+                        h3 {
+                            @include font(24px, 600);
+                            padding: 29px 0 20px;
+                            color: $font-color-h;
+                        }
+                            p{
+                                @include font(16px, 400);
+                                line-height: $line-height;
+                                padding: 0;
+                                color: $font-color-p;
+                            }
+                        }  
+                        .info:not(:nth-child(2n)){
+                            padding: 0 50px 50px 0;
+                        }
+                        .info:nth-child(2n){
+                            padding-bottom: 50px;
+                        }     
+                }
+            }
+        }
+    .FP{
+        margin-top: $block-margin;
+
+    .main-FProd{
+        .info-main-FProd{
+            @include flex(center, center);
+                flex-direction: column;
+                max-width: 100%;
+        }
+            h2{
+                text-transform: uppercase;
+                @include font(42px, Bold);
+                padding-bottom: 35px;
+                color: $font-color-h;
+            }
+            p{
+                text-align: center;
+                @include font(16px, 400);
+                padding-bottom: 32px;
+                width: 50%;
+                color: $font-color-p;
+            }
+            .bottom-line{
+                @extend %border-line;
+                @include flex(center, center);
+                text-align: center;
+        }
+        .list{
+            ul{
+                @include flex(center, center);
+                max-width: 100%;
+                margin-top: 90px;
+
+                li{
+                    list-style: none;
+
+                }
+                    a{
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        color: #555555;
+                    }
+                    a:hover{
+                        color: red;
+                    }
+            }
+                li:not(:last-child){
+                    padding-right: 50px;
+                }
+        }
+        .photo{
+            margin-top: 65px;
+
+            ul{
+                @include flex(space-around, flex-start);
+                flex-wrap: wrap;
+                padding: 0;
+                li{
+                    width: 290px;
+                    height: 295px;
+                    background: $icon-bg-color;
+                    list-style: none;
+                    margin-bottom: 10px;
+
+                }
+            }
+        }
+    }
+    }
+    .meet-main{
+        margin-top: $block-margin;
+        .meet-info{
+        
+            h2{
+               @include  font(42px, 700);
+               color: $font-color-h;
+               text-transform: uppercase;
+               margin-bottom: 40px;
+            }
+            p{
+                @include  font(16px, 400); 
+                color: $font-color-p;
+                max-width: 60%;
+                margin-bottom: 33px;
+            }
+            .bottom-line{
+                @extend %border-line;
+                margin: 0;
+            }
+        }
+        .meet-photos{
+            margin-top: 70px;
+            @include flex(flex-start, flex-start);
+            .big-photo{
+                width: 314px;
+                height: 461px;
+                background: $icon-bg-color;
+                float: left;
+            }
+            .right-part{
+                margin-left: 74px;
+                .right-info{
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    max-width: 100%;
+                    h3{
+                        @include font(32px, 600); 
+                        color: $font-color-h;
+                        text-transform: uppercase;
+                        margin-bottom: 35px;
+                    }
+                    p{
+                        @include font(16px, 400); 
+                        color: $font-color-p;
+                        margin-bottom: 46px;
+                        max-width: 70%;
+                    }
+                    .social{
+                        @extend %flex-box;
+                        li:not(:last-child){
+                            padding-right: 30px;
+                        }
+                        li{
+                            a{
+                                text-decoration: none;
+                                @include font(18px, 400);
+                                font-style: italic;
+                                color: $font-color-h;
+                            }
+                        }
+                    }
+                    
+                    .small-photos{
+                        margin-top: 35px;
+                        ul{
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-evenly;
+
+                        margin: 0;
+                        padding: 0;
+                        li{
+                            width: 198px;
+                            height: 214px;
+                            background: $icon-bg-color;
+                            list-style: none;
+                            margin: 8px;
+                            position: relative;
+                            .name{
+                                visibility: hidden;
+                                @include flex(center, flex-start);
+                                position: absolute;
+                                bottom: 0;
+                                background: #7a786e;
+                                @include font(18px, 600);
+                                text-transform: uppercase;
+                                color: white;
+                                width: 100%;
+                                padding: 10px 0 14px;
+
+                            }
+                        }
+                        li:hover .name{
+                            visibility: visible;
+                        }
+                    }
+                    }
+                }
+         
+            }
+            
+        }
+    }
+    .subscribe-main-part{
+        margin-top: $block-margin;
+       background: $main-color;
+        width: 100%;
+        @include flex(center, center);
+            flex-direction: column;
+        .subscribe-info{
+            padding: 140px 0 140px;
+            h3{
+                @include font(42px, 700);
+                color: white;
+                width: 100%;
+                @include flex(center, flex-start);
+                margin-bottom: 40px;
+            }
+            p{
+                @include font(16px, 400);
+                color: white;
+                width: 100%;
+                @include flex(center, flex-start);
+            }
+            .input-form{
+                @include flex(center, stretch);
+                margin-top: 65px;
+                input{
+                    @include font(18px, 400);
+                    width: 521px;
+                    border: none;
+                    border-radius: 5px;
+                    margin-right: 22px;
+                    padding: 30px 0 30px 37px;
+                }
+                a{
+                    @include button(red, white);
+                    @include font(18px, 700);
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    padding: 29px 55px;
+                }
+                a:hover{
+                    @include button(white, red);
+                }
+            }
+        }
+    }
+    .contact-us-page{
+        margin-top: $block-margin;
+
+        .contact-us-info{
+                 width: 100%;
+            .info{
+                width: 70%;
+                h2{
+                @include font(42px, 700);
+                color: $font-color-h;
+                text-transform: uppercase;
+                padding-bottom: 50px;
+                }
+                p{
+                    @include font(16px, 400);
+                    color: $font-color-p;
+                }
+                .line{
+                    @extend %border-line;
+                    margin-top: 54px;
+                }
+            }
+            .bottom-part{
+                @include flex(space-between, stretch);
+                margin-top: 54px;
+
+                .left-part{
+                    width: 50%;
+                .info-form{
+                    display: flex;
+                    form {
+                        width: 100%;
+                        input, textarea {
+                            background: #e5e5e5;
+                            color: $font-color-p;
+                            border: none;
+                            border-radius: 8px;
+                        }
+                        .input {
+                            @include flex(space-between, flex-start);
+                            margin-bottom: 45px;
+                            input {
+                                padding: 25px 0 25px 50px;
+                                width: 50%;
+                            }
+                            input[type="text"]{
+                                margin-right: 30px;
+                            }
+                        }
+                        textarea {
+                            padding: 33px 0 0 50px;
+                            width: 100%;
+                            height: 200px;
+                            margin-bottom: 45px;
+                        }
+
+                        a {
+                            @include button(red, white);
+                            @include font(18px, 700);
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            padding: 27px 0;
+                            width: 100%;
+                            text-align: center;
+
+                        }
+
+                        a:hover {
+                            @include button(white, red);
+                        }
+                    }
+
+                }
+            }
+                .right-part{
+                    margin-left: 30px;
+                    padding: 125px 0 125px;
+                    width: 50%;
+                    background: #2d2d2d;
+                    .info-contacts{
+                        padding-left: 30px;
+                        line-height: 3;
+                        transform: translateY(0);
+                        h3{
+                            color: #bababa;
+                            @include font(18px, 700);
+                            }
+                            p{
+                                a{
+                                    color: #bababa;
+                                    text-decoration: none;
+                                    @include font(16px, 400)
+
+                                }
+                            }
+                    }
+
+
+
+                }
+
+            }
+        }
+
+    }
+    
+}
